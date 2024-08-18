@@ -13,3 +13,5 @@ npx create-next-app clone-x-next
  customize the default import alias (@/*)?  Yes
 alias @/*
 ```
+backdrop-filter: blur(20px)
+

@@ -1,3 +1,5 @@
+// import "../styles/global.css";
+
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -23,6 +25,10 @@ const Home: React.FC = () => {
   const closeSecondModal = () => setSecondModalOpen(false);
   const goToPasswordReset = () => router.push('/password_reset');
 
+  const handleLogin = () => {
+    router.replace('/main');
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -46,7 +52,7 @@ const Home: React.FC = () => {
             가입하시려면 <a href="#">쿠키 사용</a>을 포함해 <a href="#">이용약관</a>과 <a href="#">개인정보 처리방침</a>에 동의해야 합니다.
           </p>
           <p>이미 엑수에 가입하셨나요?</p>
-          <button className={`${styles.loginButton} ${styles.button}`}>로그인</button>
+          <button className={`${styles.loginButton} ${styles.button}`} onClick={handleLogin}>로그인</button>
         </div>
       </main>
 

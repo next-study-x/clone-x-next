@@ -1,0 +1,147 @@
+/*@import './global.css';*/
+
+/* 전체 컨테이너 */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  /* 좌측 영역 */
+  .sidebar {
+    width: 250px;
+    background-color: #151515;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  
+  .sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  
+  .postButton {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* 프로필 영역 */
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    padding: 1rem 0;
+  }
+  
+  .profileImage {
+    border-radius: 50%;
+  }
+  
+  .profileName {
+    font-weight: bold;
+  }
+  
+  .profileId {
+    color: #888;
+    font-size: 0.875rem;
+  }
+  
+  /* 중앙 피드 영역 */
+  .feed {
+    flex-grow: 1;
+    padding: 1rem;
+    /* overflow-y: auto; */
+    max-width: 600px;
+  }
+  
+  /* 중앙 헤더 고정 및 반투명 처리 */
+  .feedHeader {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 중앙 콘텐츠 영역 */
+  .feedContent {
+    margin-top: 1rem;
+    background-color: #151515;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* 우측 트렌드 영역 */
+  .trends {
+    width: 350px;
+    padding: 1rem;
+  }
+  
+  .searchWrapper {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    z-index: 10;
+    padding-bottom: 1rem;
+  }
+  
+  .search {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    border: none;
+    background-color: #151515;
+    color: #fff;
+  }
+  
+  .trendsBox {
+    margin-top: 1rem;
+    background-color: #151515;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  /* 스크롤바 스타일 */
+  .feedContent::-webkit-scrollbar,
+  .trendsBox::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .feedContent::-webkit-scrollbar-thumb,
+  .trendsBox::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .feedContent::-webkit-scrollbar-thumb:hover,
+  .trendsBox::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* 반투명 처리 애니메이션 */
+  .feedHeader.scrolled {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* backdrop-filter: blur(20px); */
+  }
+  
